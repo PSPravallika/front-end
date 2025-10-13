@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Gut Fitness Membership</title>
+  <meta name="description" content="Join Gut Fitness in KR Puram. Affordable gym memberships, personal training, weight loss, strength training & diet plans. Call 9019497229." />
+
+  <!-- TailwindCSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <!-- Razorpay Checkout -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css"/>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-gray-900 to-black animate-gradient-x">
+  <div class="relative max-w-3xl w-full rounded-3xl border border-gray-700 bg-gray-900/80 p-8 shadow-2xl text-white backdrop-blur-md">
+<!--<body class="min-h-screen flex justify-center items-center p-4 dark:bg-gray-900">
+  <div class="relative max-w-3xl w-full rounded-3xl border border-gray-600 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-8 shadow-2xl text-white">-->
+
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="absolute top-4 right-4 bg-gray-800 px-3 py-1 rounded-lg text-sm hover:bg-purple-600 transition">
+      <i class="fas fa-moon"></i>
+    </button>
+    <!--<button id="themeToggle" class="absolute top-4 right-4 bg-gray-700 px-3 py-1 rounded-lg text-sm hover:bg-gray-600">
+      🌙 Dark
+    </button>-->
+
+    <!-- Logo & Title -->
+<div class="flex flex-col items-center mb-8">
+  <div class="flex items-center space-x-4">
+    <span class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 drop-shadow-lg" style="font-family: 'Montserrat', cursive; letter-spacing: 2px;">
+      <i class="fas fa-dumbbell"></i>
+      <!--<img src="https://storage.googleapis.com/a1aa/image/1a760a26-f57e-4e3e-9b09-8329c57a15a6.jpg" alt="Gut Fitness Logo" class="inline w-10 h-10 rounded-full shadow-lg align-middle"/>-->
+    </span>
+    <!--<span class="text-4xl font-extrabold tracking-tight drop-shadow-lg text-orange-400" style="font-family: 'Montserrat', sans-serif;">-->
+    <span class="whitespace-nowrap text-4xl lg:text-4xl md:text-3xl sm:text-2xl font-extrabold tracking-tight drop-shadow-lg text-orange-400" style="font-family: 'Montserrat', sans-serif;">
+      GUT FITNESS
+    </span>
+    <span class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-orange-400 drop-shadow-lg" style="font-family: 'Montserrat', cursive; letter-spacing: 2px;">
+      <!--<img src="gutfitness logo bg.png" alt="Gut Fitness Logo" class="inline w-16 h-17 rounded-full shadow-lg align-middle"/>
+      <img src="https://storage.googleapis.com/a1aa/image/1a760a26-f57e-4e3e-9b09-8329c57a15a6.jpg" alt="Gut Fitness Logo" class="inline w-10 h-10 rounded-full shadow-lg align-middle"/>-->
+      <i class="fas fa-dumbbell"></i>
+</span>
+  </div>
+  <p class="text-lg text-gray-300 mt-2" style="font-family: 'Montserrat', sans-serif;">
+    VIBRANT GYM
+  </p>
+</div>
+    <!--<div class="relative z-10 flex flex-col items-center space-y-2 mb-8 logo-title">
+      <div class="flex items-center space-x-5">
+        <img alt="Gut Fitness Logo" class="w-14 h-14" src="https://storage.googleapis.com/a1aa/image/1a760a26-f57e-4e3e-9b09-8329c57a15a6.jpg"/>
+        <h1 class="text-5xl md:text-6xl font-extrabold tracking-widest text-white glow-text">GUT FITNESS</h1>
+        <img alt="Gut Fitness Logo" class="w-14 h-14" src="https://storage.googleapis.com/a1aa/image/1a760a26-f57e-4e3e-9b09-8329c57a15a6.jpg"/>
+      </div>
+      <p class="text-xl font-semibold tracking-wide text-orange-400 drop-shadow-lg">MEMBERSHIP</p>
+    </div>-->
+
+    <!-- Plans + Offers -->
+    <form id="joinForm" class="bg-gray-800/70 p-6 rounded-2xl shadow-lg space-y-6">
+      <p class="text-xl font-bold text-orange-400 text-center">Join Now</p>
+    <!--<div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-white">-->
+      <!-- Plans -->
+      <div>
+        <p class="mb-4 text-2xl font-bold tracking-wide text-orange-400">PACKAGES</p>
+
+        <div class="space-y-3 text-lg font-medium tracking-wide">
+          <!-- Plan buttons populate the form -->
+          <button class="plan-btn" data-plan="1 Month" data-amount="1499">1 MONTH : ₹1499</button>
+          <button class="plan-btn" data-plan="3 Months" data-amount="3599">3 MONTHS : ₹3599</button>
+          <button class="plan-btn" data-plan="6 Months" data-amount="4500">6 MONTHS : ₹4500</button>
+          <button class="plan-btn" data-plan="8 Months" data-amount="5500">8 MONTHS : ₹5500</button>
+          <button class="plan-btn best" data-plan="12 Months" data-amount="6500">
+            12 MONTHS : ₹6500 <span class="badge">🔥 Best Value</span>
+          </button>
+        </div>
+
+        <!-- Contact quick actions -->
+        <div class="mt-8 flex flex-col space-y-3">
+          <a href="https://wa.me/917204177767" target="_blank" class="btn-gradient btn-icon">
+            <i class="fab fa-whatsapp"></i> <span>Chat on WhatsApp</span>
+          </a>
+          <a href="tel:+917204177767" class="btn-gradient btn-icon">
+            <i class="fas fa-phone-alt"></i> <span>Call Now</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Offer box + Checkout form -->
+      <div>
+        <div class="bg-gray-700 bg-opacity-70 rounded-2xl p-6 text-gray-200 text-base font-light tracking-wide shadow-lg">
+          <p class="font-extrabold text-orange-400 mb-4 text-xl">WHAT WE OFFER</p>
+          <ul class="space-y-2 list-inside">
+            <li><i class="fas fa-user-friends text-orange-400 mr-2"></i> PERSONAL TRAINING</li>
+            <li><i class="fas fa-dumbbell text-orange-400 mr-2"></i> STRENGTH TRAINING</li>
+            <li><i class="fas fa-plus-circle text-orange-400 mr-2"></i> WEIGHT GAIN</li>
+            <li><i class="fas fa-weight text-orange-400 mr-2"></i> WEIGHT LOSS</li>
+            <li><i class="fas fa-burn text-orange-400 mr-2"></i> FAT LOSS</li>
+            <li><i class="fas fa-running text-orange-400 mr-2"></i> FUNCTIONAL TRAINING</li>
+            <li><i class="fas fa-heartbeat text-orange-400 mr-2"></i> CROSS FIT</li>
+            <li><i class="fas fa-utensils text-orange-400 mr-2"></i> DIET & NUTRITION</li>
+            <li><i class="fas fa-lightbulb text-orange-400 mr-2"></i> TIPS & TRICKS</li>
+          </ul>
+        </div>
+
+        <!-- Checkout form -->
+<form id="joinForm" class="mt-6 bg-gray-800/60 p-5 rounded-2xl space-y-3">
+  <p class="text-lg font-semibold text-orange-400">Join Now</p>
+
+  <!-- User Info -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <input required name="name" class="input bg-gray-900/80 border border-gray-700 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 transition" placeholder="Full Name"/>
+        <input required name="phone" class="input bg-gray-900/80 border border-gray-700 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 transition" placeholder="Phone Number"/>
+        <input name="email" type="email" class="input md:col-span-2 bg-gray-900/80 border border-gray-700 rounded-lg px-4 py-2 focus:ring-2 focus:ring-purple-500 transition" placeholder="Email (optional)"/>
+      </div>
+  <!--<div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+    <input required name="name" class="input" placeholder="Full Name"/>
+    <input required name="phone" class="input" placeholder="Phone Number"/>
+    <input name="email" type="email" class="input md:col-span-2" placeholder="Email (optional)"/>
+  </div>-->
+
+  <!-- Plan Selection -->
+  <p class="text-md font-medium text-white mt-2">Choose a Plan:</p>
+      <div id="planOptions" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="planCard cursor-pointer p-6 bg-gradient-to-br from-pink-800 to-gray-800 rounded-xl text-center border-2 border-transparent hover:border-orange-400 hover:scale-105 transition shadow-lg" data-plan="Basic" data-amount="299">
+          <div class="text-2xl font-bold text-orange-300 mb-2">Basic</div>
+          <div class="text-3xl font-extrabold text-white mb-1">₹1499</div>
+          <div class="text-xs text-gray-300">1 Month</div>
+        </div>
+        <div class="planCard cursor-pointer p-6 bg-gradient-to-br from-yellow-700 to-gray-800 rounded-xl text-center border-2 border-transparent hover:border-orange-400 hover:scale-105 transition shadow-lg" data-plan="Gold" data-amount="499">
+          <div class="text-2xl font-bold text-yellow-300 mb-2">Gold</div>
+          <div class="text-3xl font-extrabold text-white mb-1">₹3599</div>
+          <div class="text-xs text-gray-300">3 Months</div>
+        </div>
+        <div class="planCard cursor-pointer p-6 bg-gradient-to-br from-white-700 to-gray-800 rounded-xl text-center border-2 border-transparent hover:border-orange-400 hover:scale-105 transition shadow-lg" data-plan="Platinum" data-amount="999">
+          <div class="text-2xl font-bold text-pink-300 mb-2">Dimond</div>
+          <div class="text-3xl font-extrabold text-white mb-1">₹4500</div>
+          <div class="text-xs text-gray-300">6 Months</div>
+        </div>
+        <div class="planCard cursor-pointer p-6 bg-gradient-to-br from-blue-700 to-gray-800 rounded-xl text-center border-2 border-transparent hover:border-orange-400 hover:scale-105 transition shadow-lg" data-plan="Platinum" data-amount="999">
+          <div class="text-2xl font-bold text-pink-300 mb-2">Platinum</div>
+          <div class="text-3xl font-extrabold text-white mb-1">₹5500</div>
+          <div class="text-xs text-gray-300">8 Months</div>
+        </div>
+        <div class="planCard cursor-pointer p-6 bg-gradient-to-br from-green-700 to-gray-800 rounded-xl text-center border-2 border-transparent hover:border-orange-400 hover:scale-105 transition shadow-lg" data-plan="Platinum" data-amount="999">
+          <div class="text-2xl font-bold text-pink-300 mb-2">Elite</div>
+          <div class="text-3xl font-extrabold text-white mb-1">₹6500</div>
+          <div class="text-xs text-gray-300">12 Months</div>
+        </div>
+      </div>
+  <!--<p class="text-md font-medium text-white mt-4">Choose a Plan:</p>
+  <div id="planOptions" class="grid grid-cols-1 md:grid-cols-3 gap-3">
+    <div class="planCard cursor-pointer p-4 bg-gray-700 rounded-xl text-center border-2 border-transparent hover:border-orange-400" data-plan="Basic" data-amount="299">
+      <p class="text-lg font-bold text-orange-300">1 Month</p>
+      <p class="text-sm text-gray-300">₹1499</p>
+    </div>
+    <div class="planCard cursor-pointer p-4 bg-gray-700 rounded-xl text-center border-2 border-transparent hover:border-orange-400" data-plan="Gold" data-amount="499">
+      <p class="text-lg font-bold text-yellow-400">3 Months</p>
+      <p class="text-sm text-gray-300">₹3599</p>
+    </div>
+    <div class="planCard cursor-pointer p-4 bg-gray-700 rounded-xl text-center border-2 border-transparent hover:border-orange-400" data-plan="Platinum" data-amount="999">
+      <p class="text-lg font-bold text-blue-400">6 Months</p>
+      <p class="text-sm text-gray-300">₹4500</p>
+    </div>
+        <div class="planCard cursor-pointer p-4 bg-gray-700 rounded-xl text-center border-2 border-transparent hover:border-orange-400" data-plan="Platinum" data-amount="999">
+      <p class="text-lg font-bold text-purple-400">8 Months</p>
+      <p class="text-sm text-gray-300">₹5500</p>
+    </div>
+        <div class="planCard cursor-pointer p-4 bg-gray-700 rounded-xl text-center border-2 border-transparent hover:border-orange-400" data-plan="Platinum" data-amount="999">
+      <p class="text-lg font-bold text-green-400">12 Months</p>
+      <p class="text-sm text-gray-300">₹6500</p>
+    </div>
+  </div>-->
+
+  <!-- Hidden Inputs to store selected plan & amount -->
+  <input type="hidden" name="plan" id="selectedPlan" required />
+      <input type="hidden" name="amount" id="selectedAmount" required />
+  <!--<input type="hidden" name="plan" id="selectedPlan" required />
+  <input type="hidden" name="amount" id="selectedAmount" required />
+</form>-->
+
+<!-- Link external JS -->
+<script src="script.js"></script>
+
+
+        <!-- Checkout form 
+        <form id="joinForm" class="mt-6 bg-gray-800/60 p-5 rounded-2xl space-y-3">
+          <p class="text-lg font-semibold text-orange-400">Join Now</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <input required name="name" class="input" placeholder="Full Name"/>
+            <input required name="phone" class="input" placeholder="Phone Number" />
+            <input name="email" type="email" class="input md:col-span-2" placeholder="Email (optional)"/>
+            <input required name="plan" class="input" placeholder="Plan (select from left)" readonly />
+            <input required name="amount" class="input" placeholder="Amount (₹)" readonly />
+          </div>
+
+          <button type="submit" id="payBtn" class="btn-gradient w-full flex items-center justify-center space-x-2">
+            <i class="fas fa-credit-card"></i><span>Pay Securely</span>
+          </button>
+
+          <p class="text-xs text-gray-300 mt-2">Payments are powered by Razorpay. You’ll receive confirmation on WhatsApp after successful payment.</p>
+        </form>
+      </div>
+    </div> -->
+
+    <!-- Submit Button -->
+      <button type="submit" id="payBtn" class="w-full py-3 mt-4 rounded-xl bg-gradient-to-r from-orange-400 to-pink-500 text-white font-bold text-lg shadow-lg hover:from-pink-500 hover:to-orange-400 transition flex items-center justify-center space-x-2">
+        <i class="fas fa-bolt"></i>
+        <span>Join & Pay</span>
+      </button>
+      <p class="text-xs text-gray-400 mt-2 text-center">Payments are powered by Razorpay. You’ll receive confirmation on WhatsApp after successful payment.</p>
+    </form>
+
+    <!-- Address -->
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm font-semibold tracking-wide">
+      <div>
+        <div class="flex items-top space-x-2 mb-2">
+          <i class="fas fa-map-marker-alt text-orange-400"></i>
+          <span>GUT FITNESS, ABOVE VARADHI CLINIC, 1ST FLOOR, OIL MILL ROAD, NEXT TO
+          NAVYA ABARANA, 2ND MAIN, KR PURAM _36</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-phone-alt text-green-400"></i>
+          <span>9019497229 ,</span>
+          <span>7204177767</span>
+        </div>
+      </div>
+      <div>
+        <div class="flex items-center space-x-2 mb-2">
+          <i class="fas fa-clock text-purple-400"></i>
+          <span>Mon-Sat: 5am - 10pm</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-dumbbell text-pink-400"></i>
+          <span>Personal Training | Diet Plans | Weight Loss</span>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--<div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 text-sm font-semibold tracking-wide">
+      <div>
+        <p class="text-orange-400 font-bold mb-1">ADDRESS :</p>
+        <p class="font-normal leading-relaxed">
+          GUT FITNESS, ABOVE VARADHI CLINIC, 1ST FLOOR, OIL MILL ROAD, NEXT TO
+          NAVYA ABARANA, 2ND MAIN, KR PURAM _36
+        </p>
+      </div>
+      <div>
+        <p class="text-orange-400 font-bold mb-1">More Information :</p>
+        <p class="font-normal mb-1">Contact details:</p>
+        <p class="font-normal">9019497229</p>
+        <p class="font-normal">7204177767</p>
+      </div>
+    </div>
+  </div>-->
+
+  <script>
+    /* Configure your backend URL here */
+    window.APP_CONFIG = {
+      API_BASE_URL: "http://localhost:5000"
+    };
+  </script>
+  <script src="./script.js"></script>
+  <script>
+document.getElementById('themeToggle').addEventListener('click', function() {
+  document.body.classList.toggle('light');
+  // Change icon between moon and sun
+  const icon = this.querySelector('i');
+  if(document.body.classList.contains('light')) {
+    icon.classList.remove('fa-moon');
+    icon.classList.add('fa-sun');
+  } else {
+    icon.classList.remove('fa-sun');
+    icon.classList.add('fa-moon');
+  }
+});
+</script> 
+</body>
+</html>
