@@ -1,0 +1,24 @@
+let menu = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
+
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+}
+
+window.onscroll = () => {
+    menu.classList.remove('bx-x');
+    navbar.classList.remove('active');
+}
+
+//Typing Text code
+
+document.addEventListener('DOMContentLoaded', function () {
+    const typed = new Typed('.multiple-test', {
+        strings: ['Personal Training', 'Weight Gain', 'Strength Training', 'Fat Lose', 'Weight Lifting', 'Cross Fit'],
+        typeSpeed: 60,
+        backSpeed: 60,
+        backDelay: 1000,
+        loop: true,
+      });
+});
